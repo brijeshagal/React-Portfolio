@@ -1,11 +1,10 @@
 import './portfolioList.scss';
-import { useState } from 'react';
 
-export default function PortfolioList({title, active, setSelected, id}) {
-  // const [selected, setSelected] = useState("featured");
+export default function PortfolioList({id, title, active, setSelected}) {  
   return (
+    
     <li className={active ? "potfolioList active" : "portfolioList"} 
-    onClick ={ ()=>
+    onClick = { ()=>
       setSelected(id)
     }>
       {title}

@@ -1,7 +1,7 @@
 export const featuredPortfolio = [
   {
     id: 1,
-    title: "Socila Media App",
+    title: "Social Media App",
     img: "#",
   },
 

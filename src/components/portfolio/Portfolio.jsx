@@ -9,10 +9,10 @@ export default function Portfolio() {
   const list = [
     {
       id: "featured",
-      title: "featured",
+      title: "Featured",
     },
     {
-      id: "web",
+      id: "webPortfolio",
       title: "Web App",
     },
     {
@@ -30,7 +30,7 @@ export default function Portfolio() {
       case "featured":
         setData(featuredPortfolio);
         break;
-      case "Web App":
+      case "webPortfolio":
         setData(webPortfolio);
         break;
       default:
@@ -41,14 +41,14 @@ export default function Portfolio() {
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
       <ul>
-        {list.map((item) => {
+        {list.map((item) => (
           <PortfolioList
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
             id={item.id}
-          />;
-        })}
+          />
+        ))}
       </ul>
       <div className="container">
         {data.map((d) => (
